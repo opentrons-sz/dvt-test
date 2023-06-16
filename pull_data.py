@@ -55,7 +55,7 @@ class PullData:
             print("connected!!")
             return True
         except Exception as e:
-            print("un reached ip", e)
+            print("unreached ip", e)
             return False
 
     def scp_file(self, ip, target_path, save_path, user_name="root", password=password):
