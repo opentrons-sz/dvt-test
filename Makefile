@@ -34,6 +34,6 @@ git-clean:
 	git rm -r --cached .
 	git add .
 	git commit -m "update .gitignore"
-	git clean -F
+	git clean -f
 
 
