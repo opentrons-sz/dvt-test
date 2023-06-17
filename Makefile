@@ -28,3 +28,12 @@ python3-run:
 	@echo "run"
 	python3 -m pipenv run python dvt_test.py
 
+.PHONY: git-clean
+git-clean:
+	@echo clean
+	git rm -r --cached .
+	git add .
+	git commit -m "update .gitignore"
+	git clean -F
+
+
