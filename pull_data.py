@@ -73,9 +73,14 @@ class PullData:
         scp_cmd = f"scp -r \"{user_name}@{ip}:{target_path}\" \"{save_path}\""
         if password is None or password == "None":
             res = subprocess.getoutput(scp_cmd)
+            if "No route to host" in res:
+                print("scp faild\n"
+                      f"{res}")
+                return False
             print(res)
+            return True
         else:
-            pass
+            return False
 
     def rm_file(self, target):
         """
@@ -93,8 +98,10 @@ class PullData:
         if self.pull_flag:
             print("开始拉取文件...")
             try:
-                self.scp_file(self.ip, target_path, self.data_path)
-                print("download -> " + self.data_path)
+                if self.scp_file(self.ip, target_path, self.data_path):
+                    print("download -> " + self.data_path)
+                else:
+                    pass
             except ConnectionError as e:
                 print(e)
         if self.clear_flag:
@@ -111,4 +118,4 @@ class PullData:
                 except Exception as e:
                     print("清除文件失败...")
                     print(e)
-        print("操作成功...")
+        print("操作结束...")

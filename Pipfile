@@ -1,15 +1,13 @@
 [[source]]
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
-pexpect = "*"
-pyinstall = "*"
-wexpect = "*"
-pypiwin32 = "*"
-pywin32 = "==301"
+paramiko = "*"
+p = "*"
 py2app = "*"
+pyinstaller = "*"
 
 [dev-packages]
 

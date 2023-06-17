@@ -1,14 +1,30 @@
-.PHONY: build-win
-build-win:
-	@echo "build-win"
-	python -m pipenv run pyinstaller -F -i logo.ico dvt_test.py --distpath win-dist
+ReleaseVersion = "V0_1_0"
 
-.PHONY: build-app
-build-app:
-	@echo "build-app"
-	python -m pipenv run py2applet --make-setup baba.py
+.PHONY: python3-build
+python3-build:
+	@echo "build"
+	python3 -m pipenv run pyinstaller -F -n DevTest${ReleaseVersion} -i logo.ico  dvt_test.py --distpath release
 
-.PHONY: install
-install:
+.PHONY: python-build
+python-build:
+	@echo "build"
+	python -m pipenv run pyinstaller -F -n DevTest${ReleaseVersion} -i logo.ico  dvt_test.py --distpath release
+
+.PHONY: python-install
+python-install:
 	@echo "install pipenv"
 	python -m pipenv install
+
+.PHONY: python3-install
+python3-install:
+	@echo "install pipenv"
+	python3 -m pipenv install
+
+python-run:
+	@echo "run"
+	python -m pipenv run python dvt_test.py
+
+python3-run:
+	@echo "run"
+	python3 -m pipenv run python dvt_test.py
+
