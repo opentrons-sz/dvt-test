@@ -4,12 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pexpect = "*"
-pyinstall = "*"
-wexpect = "*"
 pypiwin32 = "*"
 pywin32 = "==301"
 py2app = "*"
+pyinstaller = "*"
+paramiko = "*"
 
 [dev-packages]
 
