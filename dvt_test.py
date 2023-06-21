@@ -20,7 +20,7 @@ class TestTools:
 
     def pull_data_menu(self):
         for k, v in pull_config.items():
-            print(f"type {k[3]} to {v[0]}")
+            print(f"type {k[3:]} to {v[0]}")
         get_input = input(">")
         return get_input
 

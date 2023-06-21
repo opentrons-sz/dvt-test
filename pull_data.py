@@ -12,7 +12,13 @@ pull_config = {
     "idx6": ["删除数据: pipette_lifetime", "del_data", "/data/testing_data/tip-pick-up-lifetime-test"],
     "idx7": ["下载数据: gripper_diagnostic", "pull_data", "/data/testing_data/gripper-assembly-qc-ot3"],
     "idx8": ["下载数据且删除: gripper_diagnostic", "pull_data_del", "/data/testing_data/gripper-assembly-qc-ot3"],
-    "idx9": ["删除数据: gripper_diagnostic", "del_data", "/data/testing_data/gripper-assembly-qc-ot3"]
+    "idx9": ["删除数据: gripper_diagnostic", "del_data", "/data/testing_data/gripper-assembly-qc-ot3"],
+    "idx10": ["下载数据: gravimetric-ot3-p50", "pull_data", "/data/testing_data/gravimetric-ot3-p50"],
+    "idx11": ["下载数据且删除: gravimetric-ot3-p50", "pull_data_del", "/data/testing_data/gravimetric-ot3-p50"],
+    "idx12": ["删除数据: gravimetric-ot3-p50", "del_data", "/data/testing_data/gravimetric-ot3-p50"],
+    "idx13": ["下载数据: gravimetric-ot3-p1000", "pull_data", "/data/testing_data/gravimetric-ot3-p1000"],
+    "idx14": ["下载数据且删除: gravimetric-ot3-p1000", "pull_data_del", "/data/testing_data/gravimetric-ot3-p1000"],
+    "idx15": ["删除数据: gravimetric-ot3-p1000", "del_data", "/data/testing_data/gravimetric-ot3-p1000"]
 }
 
 password = "None"
