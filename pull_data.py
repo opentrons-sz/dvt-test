@@ -18,7 +18,10 @@ pull_config = {
     "idx12": ["删除数据: gravimetric-ot3-p50", "del_data", "/data/testing_data/gravimetric-ot3-p50"],
     "idx13": ["下载数据: gravimetric-ot3-p1000", "pull_data", "/data/testing_data/gravimetric-ot3-p1000"],
     "idx14": ["下载数据且删除: gravimetric-ot3-p1000", "pull_data_del", "/data/testing_data/gravimetric-ot3-p1000"],
-    "idx15": ["删除数据: gravimetric-ot3-p1000", "del_data", "/data/testing_data/gravimetric-ot3-p1000"]
+    "idx15": ["删除数据: gravimetric-ot3-p1000", "del_data", "/data/testing_data/gravimetric-ot3-p1000"],
+    "idx16": ["下载数据: ninety-six-assembly-qc-ot3", "pull_data", "/data/testing_data/ninety-six-assembly-qc-ot3"],
+    "idx17": ["下载数据且删除: ninety-six-assembly-qc-ot3", "pull_data_del", "/data/testing_data/ninety-six-assembly-qc-ot3"],
+    "idx18": ["删除数据: ninety-six-assembly-qc-ot3", "del_data", "/data/testing_data/ninety-six-assembly-qc-ot3"]
 }
 
 password = "None"
