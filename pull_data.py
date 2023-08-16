@@ -4,9 +4,9 @@ import subprocess
 import paramiko
 
 pull_config = {
-    "idx1": ["下载数据: robot_diagnostic（OT3诊断数据）", "pull_data", "/data/testing_data/robot_assembly_qc_ot3"],
-    "idx2": ["下载数据且删除: robot_diagnostic（OT3诊断数据）", "pull_data_del", "/data/testing_data/robot_assembly_qc_ot3"],
-    "idx3": ["删除数据: robot_diagnostic（OT3诊断数据）", "del_data", "/data/testing_data/robot_assembly_qc_ot3"],
+    "idx1": ["下载数据: robot_diagnostic（OT3诊断数据）", "pull_data", "/data/testing_data/robot-assembly-qc-ot3"],
+    "idx2": ["下载数据且删除: robot_diagnostic（OT3诊断数据）", "pull_data_del", "/data/testing_data/robot-assembly-qc-ot3"],
+    "idx3": ["删除数据: robot_diagnostic（OT3诊断数据）", "del_data", "/data/testing_data/robot-assembly-qc-ot3"],
     "idx4": ["下载数据: pipette_lifetime", "pull_data", "/opt/test"],
     "idx5": ["下载数据且删除: pipette_lifetime", "pull_data_del", "/data/testing_data/tip-pick-up-lifetime-test"],
     "idx6": ["删除数据: pipette_lifetime", "del_data", "/data/testing_data/tip-pick-up-lifetime-test"],
