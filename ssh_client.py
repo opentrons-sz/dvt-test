@@ -172,7 +172,7 @@ class SSH(SSHClient):
 
 
 if __name__ == '__main__':
-    s_obj = SSH("192.168.6.91")
+    s_obj = SSH("192.168.6.100")
     s_obj.login()
     s_obj.write_cmd("df -h")
 

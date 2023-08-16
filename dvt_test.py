@@ -3,6 +3,7 @@
 @auth: andy-hu
 @date: 20230615
 """
+import subprocess
 from pull_data import pull_config
 from pull_data import PullData
 
@@ -10,6 +11,7 @@ from pull_data import PullData
 class TestTools:
     def __init__(self):
         self.robot_ip = None
+        self.password = "None"
 
     def get_input_menu1(self):
         get_input = input("type 1 pull data(输入1开始拉取数据)\n"
@@ -21,6 +23,13 @@ class TestTools:
     def pull_data_menu(self):
         for k, v in pull_config.items():
             print(f"type {k[3:]} to {v[0]}")
+        get_input = input(">")
+        return get_input
+
+    def jog_menu(self):
+        print("type 1 jog left pipette2(输入1开始jog左移液器)\n"
+              "type 2 jog right pipette(输入1开始jog右移液器)\n"
+              "type 3 jog gripper(输入3开始jog gripper)")
         get_input = input(">")
         return get_input
 
@@ -47,6 +56,21 @@ class TestTools:
         pull = PullData(self.robot_ip, clear_flag, pull_flag)
         pull.run(pull_target)
 
+    def jog_handel(self, jog_input):
+        """
+        get jog menu
+        :return:
+        """
+        if jog_input == "1":
+            mount = "left"
+        elif jog_input == "2":
+            mount = "right"
+        elif jog_input == "3":
+            mount = "gripper"
+        else:
+            raise ValueError("input err")
+        return mount
+
     def menu1_handel(self, menu1_answer: str):
         """
         一级菜单
@@ -61,7 +85,15 @@ class TestTools:
             pull_target = target[2]
             self.pull_data_handel(pull_description, pull_tag, pull_target)
         elif menu1_answer == "2":
-            pass
+            jog_input = self.jog_menu()
+            mount = self.jog_handel(jog_input)
+
+            cmd = f"ssh root@{self.robot_ip} \"cd /opt/opentrons-robot-server ;python3 -m hardware_testing.examples.jog_ot3 --mount {mount}\""
+            if self.password is None or self.password == "None":
+                res = subprocess.getoutput(cmd)
+                print(res)
+            else:
+                pass
         elif menu1_answer == "3":
             pass
         else:

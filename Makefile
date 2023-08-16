@@ -1,4 +1,4 @@
-ReleaseVersion = "V0_1_0"
+ReleaseVersion = "V0_1_3"
 
 .PHONY: python3-build
 python3-build:

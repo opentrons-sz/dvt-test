@@ -4,9 +4,9 @@ import subprocess
 import paramiko
 
 pull_config = {
-    "idx1": ["下载数据: robot_diagnostic", "pull_data", "/data/testing_data/robot_assembly_qc_ot3"],
-    "idx2": ["下载数据且删除: robot_diagnostic", "pull_data_del", "/data/testing_data/robot_assembly_qc_ot3"],
-    "idx3": ["删除数据: robot_diagnostic", "del_data", "/data/testing_data/robot_assembly_qc_ot3"],
+    "idx1": ["下载数据: robot_diagnostic（OT3诊断数据）", "pull_data", "/data/testing_data/robot_assembly_qc_ot3"],
+    "idx2": ["下载数据且删除: robot_diagnostic（OT3诊断数据）", "pull_data_del", "/data/testing_data/robot_assembly_qc_ot3"],
+    "idx3": ["删除数据: robot_diagnostic（OT3诊断数据）", "del_data", "/data/testing_data/robot_assembly_qc_ot3"],
     "idx4": ["下载数据: pipette_lifetime", "pull_data", "/opt/test"],
     "idx5": ["下载数据且删除: pipette_lifetime", "pull_data_del", "/data/testing_data/tip-pick-up-lifetime-test"],
     "idx6": ["删除数据: pipette_lifetime", "del_data", "/data/testing_data/tip-pick-up-lifetime-test"],
@@ -21,7 +21,16 @@ pull_config = {
     "idx15": ["删除数据: gravimetric-ot3-p1000", "del_data", "/data/testing_data/gravimetric-ot3-p1000"],
     "idx16": ["下载数据: ninety-six-assembly-qc-ot3", "pull_data", "/data/testing_data/ninety-six-assembly-qc-ot3"],
     "idx17": ["下载数据且删除: ninety-six-assembly-qc-ot3", "pull_data_del", "/data/testing_data/ninety-six-assembly-qc-ot3"],
-    "idx18": ["删除数据: ninety-six-assembly-qc-ot3", "del_data", "/data/testing_data/ninety-six-assembly-qc-ot3"]
+    "idx18": ["删除数据: ninety-six-assembly-qc-ot3", "del_data", "/data/testing_data/ninety-six-assembly-qc-ot3"],
+    "idx19": ["下载数据: belt-calibration-ot3", "pull_data", "/data/testing_data/belt-calibration-ot3"],
+    "idx20": ["下载数据且删除: belt-calibration-ot3", "pull_data_del", "/data/testing_data/belt-calibration-ot3"],
+    "idx21": ["删除数据: belt-calibration-ot3", "del_data", "/data/testing_data/belt-calibration-ot3"],
+    "idx22": ["下载数据: stress-test-ot3（xy 轴老化数据）", "pull_data", "/data/testing_data/stress-test-qc-ot3"],
+    "idx23": ["下载数据且删除: stress-test-ot3（xy 轴老化数据）", "pull_data_del", "/data/testing_data/stress-test-qc-ot3"],
+    "idx24": ["删除数据: stress-test-ot3（xy 轴老化数据）", "del_data", "/data/testing_data/stress-test-qc-ot3"],
+    "idx25": ["下载数据:  z-stage-test（Z轴测试数据）", "pull_data", "/data/testing_data/z-stage-test-qc-ot3"],
+    "idx26": ["下载数据且删除:  z-stage-test（Z轴测试数据）", "pull_data_del", "/data/testing_data/z-stage-test-qc-ot3"],
+    "idx27": ["删除数据:  z-stage-test（Z轴测试数据）", "del_data", "/data/testing_data/z-stage-test-qc-ot3"]
 }
 
 password = "None"
